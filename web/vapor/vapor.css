@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'VCR OSD MONO';
+    src: url('images/VCR_OSD_MONO_1.001.ttf');
+    src: local('VCR OSD MONO'), local('VCR OSD MONO'),
+        url("images/VCR_OSD_MONO_1.001.ttf") format("ttf"),
+}
+
+@keyframes backgroundTransition { 
+    0%{background-position:45% 0%}
+    50%{background-position:56% 100%}
+    100%{background-position:45% 0%}
+}
+
+html, body {
+    background: linear-gradient(180deg, #ff0dbf, #c32aff, #6699f6);
+    background-size: 600% 600%;
+    animation: backgroundTransition 10s ease infinite;
+    font-family: 'VCR OSD MONO';
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+}
+
+#top {
+    left: 20px;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 0%;
+        width: 50%; 
+    }
+
+    to {
+        margin-left: -50%;
+        width: 50%;
+    }
+}
+
+#slider {
+    animation-duration: 7s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    right: 50%;
+}
+
+#bust {
+    position: relative;
+    float: left;
+}
+
+#jap {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 40%;
+    animation: blinker normal 2s infinite ease-in-out;
+}
+
+@keyframes blinker {  
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
